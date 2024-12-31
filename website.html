@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>365 days of us <3 </title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background: url('https://i.pinimg.com/736x/72/60/b6/7260b6924ee220ac5b6e720e3082247e.jpg') no-repeat center center fixed; /* Full page background */            
+            background-size: cover;
+            color: #fff;            
+            color: #fff;
+            overflow-x: hidden;
+            text-align: center;
+        }
+
+        /* Heart Pattern Background (Optional) */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://www.transparenttextures.com/patterns/heart.png');
+            opacity: 0.2;
+        }
+
+        /* Header Section */
+        header {
+            text-align: center;
+            padding: 100px 20px;
+            background: url('https://i.postimg.cc/dVx0GF8C/Screenshot-2024-12-31-at-12-49-02-PM.png') no-repeat center center/cover; /* Header background image */            color: #fff;
+            height: 600px;
+            position: relative;
+        }
+
+        .header-image h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 4em;
+            margin-top: 20px;
+        }
+
+        .header-image p {
+            font-size: 1.5em;
+            margin-top: 10px;
+        }
+
+        /* Timer Section */
+        .timer {
+            font-size: 2em;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+     
+
+        /* 12 Months Section */
+        .timeline {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 4 columns per row */
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .month-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .month-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .month-card:hover {
+            transform: scale(1.05);
+        }
+
+        .month-card p {
+            margin-top: 10px;
+            font-size: 1.2em;
+            color: #fff;
+        }
+
+        /* Reasons I Love You Section */
+        .reasons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 4 columns */
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .reason-card {
+            background: #ff4d6d;
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
+        }
+
+        .reason-card:hover {
+            transform: scale(1.05);
+        }
+
+        .reason-card p {
+            font-size: 1.1em;
+            margin: 0;
+        }
+
+        /* Sticky Notes Section */
+        .sticky-notes {
+            margin-top: 50px;
+        }
+
+        .sticky-note {
+            display: inline-block;
+            background: #ffb2b2;
+            padding: 15px;
+            margin: 15px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #fff;
+            position: relative;
+        }
+
+       
+        /* Handwritten Message Section */
+        .handwritten-message {
+            font-family: 'Great Vibes', cursive;
+            font-size: 1.5em;
+            margin-top: 40px;
+            color: #fff;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+            background: #3d0b0b;
+        }
+
+        /* Scroll Animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-image">
+            <h1>365 days of us</h1>
+            <p>A timeline of our journey together.</p>
+        </div>
+    </header>
+
+    <!-- Timer Section -->
+    <section class="timer">
+        <h2>We have been together since:</h2>
+        <div id="timer"></div>
+    </section>
+
+
+    <!-- 12 Months Timeline -->
+    <section>
+        <h2>Our 2024 Timeline</h2>
+        <div class="timeline">
+            <!-- Month Cards with Image + Text -->
+            <div class="month-card">
+                <img src="https://i.ibb.co/4J6snbz/IMG-0234.jpg" alt="January">
+                <p>January: Full of our cozy moments. From eating cheese pull out thingy in Prashant vihar to early morning murthal dates.</p>
+            </div>
+            <div class="month-card">
+                <img src="https://i.ibb.co/MSmDhpR/IMG-3595.jpg" alt="February">
+                <p>February: A special month in our hearts. Cutting the heart shape cake for valentines and seeing your smile still gives me goosebumps. And we had our first date!! Still miss that day. We also fought a lot but that just made us come closer.</p>
+            </div>
+            <div class="month-card">
+                <img src="https://i.ibb.co/Mh379WJ/IMG-9219-2.jpg" alt="March">
+                <p>March: Celebrating love and growth with our tattoo date and vibing on songs during the jam. Jab Tanisha mere sath hai toh bhaad mei jaye sab!! Shopping date at pacific!</p>
+            </div>
+            <div class="month-card">
+                <img src="https://i.ibb.co/xMGvGcd/IMG-1947.jpg" alt="April">
+                <p>April: Our bond growing stronger. Going to Mr DIY and buying anything I see because I know you are there hehe. Morning sagar ratna dates. Parikrama and Parashar >>> </p>
+            </div>
+            <div class="month-card">
+                <img src="https://i.ibb.co/RphL6sD/Full-Size-Render-3.jpg" 
+alt="May">
+                <p>May: Dance class ke naam pe did we go outside delhi? YESS lol. Tera birthday pe aana with that bouquet, I still get goosebumps. And the infamous india gate and gola at night! GB road too!!! </p>
+            </div>
+            <div class="month-card">
+                <img src="https://i.ibb.co/4MwbQH5/29-DB6392-7-AB0-4169-8-A2-E-059-A18-F724-C5.jpg" alt="June">
+                <p>June: Exploring together. Rockstar movie date and clay date>> </p>
+            </div>
+            <div class="month-card">
+                <img src="https://i.ibb.co/VMKShHJ/IMG-5869.jpg" alt="July">
+                <p>July: Our summer of adventure, in the bedroom!! The 3 hour hotel room miss itttt. You getting milk cake and kalakand for me!!</p>
+            </div>
+            <div class="month-card">
+                <img src="https://i.ibb.co/h7qtfD8/IMG-7632-2.jpg" alt="August">
+                <p>August: laughter and love. Having rajma chawal at the haldirams that does not exist!! </p>
+            </div>
+            <div class="month-card">
+                <img src="https://i.ibb.co/4fbZHxQ/IMG-9314.jpg" alt="September">
+                <p>September: Stronger than ever.A tough month for you but im so proud of you my love!! </p>
+            </div>
+            <div class="month-card">
+                <img src="https://i.ibb.co/cDMQ619/IMG-0366-2.jpg " 
+alt="October">
+                <p>October: Mela moments to cherish.Our annual mele pe jhula jhulna! And you coming at the back gate at 12 at night! </p>
+            </div>
+            <div class="month-card">
+                <img src="https://i.ibb.co/jkHCNTg/IMG-1641-2.jpg”
+alt="November">
+                <p>November: A year of love and memories.Celebrated your birthday, boyfriend day and our one year anniversary. A very rough and tough month but we got through!</p>
+            </div>
+            <div class="month-card">
+                <img src="https://i.ibb.co/SPF5W5t/IMG-2228.jpg" alt="December">
+                <p>December: Sorting all and every fight ever lol but coming out stronger than ever. Ending the year with you, hoping to continue and grow with you in the coming years! </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reasons I Love You Section -->
+    <section class="reasons">
+        <h2>20 Reasons I Love You</h2>
+        <!-- 20 Reason Cards -->
+        <div class="reason-card"><p>You make me laugh every day.</p></div>
+        <div class="reason-card"><p>You're always there for me.</p></div>
+        <div class="reason-card"><p>You handle all my nakhre.</p></div>
+        <div class="reason-card"><p>You're my best friend.</p></div>
+        <div class="reason-card"><p>You are super hardworking and I am proud of you.</p></div>
+        <div class="reason-card"><p>You introduced me to Karan Aujla and Satinder Sartaaj.</p></div>
+        <div class="reason-card"><p>I love how you care for me.</p></div>
+        <div class="reason-card"><p>You have a million dollar smile.</p></div>
+        <div class="reason-card"><p>You make my eyes shine.</p></div>
+        <div class="reason-card"><p>We have so much fun together.</p></div>
+        <div class="reason-card"><p>You always understand me.</p></div>
+        <div class="reason-card"><p>You believe in us.</p></div>
+        <div class="reason-card"><p>You treat me like a bacha.</p></div>
+        <div class="reason-card"><p>Your smile lights up my life</p></div>
+        <div class="reason-card"><p>You make everyday special.</p></div>
+        <div class="reason-card"><p>You vibe with me on Anarkali Disco Chali</p></div>
+        <div class="reason-card"><p>You make me feel safe.</p></div>
+        <div class="reason-card"><p>Your laugh is contagious.</p></div>
+        <div class="reason-card"><p>I feel comfortable around you</p></div>
+    </section>
+
+    <!-- Sticky Notes Section -->
+    <section class="sticky-notes">
+        <h2>Sticky Notes</h2>
+        <div class="sticky-note fade-in" style="transition-delay: 0.2s;">
+            <p>Dil tu, jaan tu, dard di dawa tu, jab tak mai jeena mere jeene di wajah tu.</p>
+        </div>
+        <div class="sticky-note fade-in" style="transition-delay: 0.4s;">
+            <p>Saare din di gallaan beheke dassa mai tenu.</p>
+        </div>
+        <div class="sticky-note fade-in" style="transition-delay: 0.6s;">
+            <p>Yaar tere naal, pyaar tere naal, jaan bhi tetho vaar diyan.</p>
+        </div>
+        <div class="sticky-note fade-in" style="transition-delay: 0.8s;">
+            <p>Bachkaane se sawaalo mei, sang rahiyo.</p>
+        </div>
+        <div class="sticky-note fade-in" style="transition-delay: 1s;">
+            <p>Tu hai toh dil dhadakta hai, tu hai toh saans aati hai.</p>
+        </div>
+        <div class="sticky-note fade-in" style="transition-delay: 1.2s;">
+            <p>Tu hai to mujhe phir aur kya chahiye, kisi ki na madad na dua chahiye.</p>
+        </div>
+        <div class="sticky-note fade-in" style="transition-delay: 1.4s;">
+            <p>Tu na toh ghar ghar nhi lagta, tu hai toh darr nahi lagta.</p>
+        </div>
+        <div class="sticky-note fade-in" style="transition-delay: 1.6s;">
+            <p>Jo tum mere ho, toh mai kuch na maangu duniya se.</p>
+        </div>
+        <div class="sticky-note fade-in" style="transition-delay: 1.8s;">
+            <p>Chaand mei bhi daag par, na tujhme ek bhi.</p>
+        </div>
+        <div class="sticky-note fade-in" style="transition-delay: 2s;">
+            <p>Tumhare pyaar ki kasam, tum hara gham hai mera gham.</p>
+        </div>
+    </section>
+
+    <!-- Handwritten Message Section -->
+    <section class="handwritten-message">
+        <p>Happy New Year, My Love! ❤️  
+
+As we step into this brand-new year, I just want to take a moment to remind you how much you mean to me. Every day spent with you feels like a blessing, and every moment becomes a cherished memory.  
+
+This year, I hope we continue to grow together, laugh harder, love deeper, and create countless unforgettable moments. You are my rock, my safe space, and my greatest joy.  
+
+Here’s to another year of love, adventures, and dreams coming true—together.  
+
+I love you more than words can express. Cheers to us and an incredible year ahead! 🥂✨ 
+
+Forever yours,  
+Tana Ji 💖 </p>
+    </section>
+
+    <footer>
+        <p>Created with love, for tana ki jaan. </p>
+    </footer>
+
+    <script>
+        // Timer Logic
+        const startDate = new Date('2023-11-19T02:00:00'); // Start date: November 19, 2023, 2:00 AM
+        const timerElement = document.getElementById('timer');
+
+        function updateTimer() {
+            const now = new Date();
+            const diff = now - startDate;
+
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+            timerElement.textContent = `We have been together since ${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds.`;
+        }
+
+        setInterval(updateTimer, 1000);
+        updateTimer(); // Call initially
+
+        // Toggle music play/pause
+        function toggleMusic() {
+            const music = document.getElementById('bg-music');
+            if (music.paused) {
+                music.play();
+            } else {
+                music.pause();
+            }
+        }
+
+        // Add fade-in effect to sticky notes
+        window.addEventListener('scroll', function() {
+            const stickyNotes = document.querySelectorAll('.sticky-note');
+            stickyNotes.forEach(note => {
+                const rect = note.getBoundingClientRect();
+                if (rect.top < window.innerHeight) {
+                    note.classList.add('visible');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
+
